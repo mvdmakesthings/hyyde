@@ -5,7 +5,11 @@ navigation_weight: 1
 ---
 
 <div class="home">
-
 	<h1>HOMEPAGE</h1>
 
+	{% responsive_image path: "images/hyde.jpg" width: "400" alt: "Picture of Hyde" sizes: "(max-width: 700px) 700px, 100vw" %}
+	{% responsive_image path: "images/jekyll.jpg" width: "300" alt: "Picture of Jekyll" sizes: "100vw" %}
+	{% responsive_image class: "image" path: "images/jekyllposter.jpg" width: "700" alt: "Picture of Jekyll Poster" sizes: "(min-width: 36em) 33.3vw,100vw" %}
+
+	<img class="lazy-load" src="{{ 'images/bgstill.jpg' | prepend: site.baseurl }}" alt="Background Still" />
 </div>

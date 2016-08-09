@@ -1,0 +1,16 @@
+{% capture srcset %}
+    {% for i in resized %}
+        /{{ i.path }} {{ i.width }}w,
+    {% endfor %}
+{% endcapture %}
+
+<img
+    src="/{{ path }}"
+    {% if class %}class="{{ class }}" {% endif %}
+    {% if id %}id="{{ id }}" {% endif %}
+    {% if alt %}alt="{{ alt }}" {% endif %}
+    {% if width %}width="{{ width }}" {% endif %}
+    {% if height %}height="{{ height }}" {% endif %}
+    {% if sizes %}sizes="{{ sizes }}"{% else %}sizes="100vw" {% endif %}
+    srcset="{{ srcset | strip_newlines }} /{{ original.path }} {{ original.width }}w"
+>
