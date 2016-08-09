@@ -41,8 +41,8 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      ["jekyll-seo-tag"]
-#https://github.com/jekyll/jekyll-seo-tag
+gems:
+  - jekyll-seo-tag #https://github.com/jekyll/jekyll-seo-tag
 
 # Conversion
 markdown:    kramdown
