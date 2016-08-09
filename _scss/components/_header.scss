@@ -1,0 +1,12 @@
+.site__header {
+	background: $gray;
+
+	@media (min-width: $mobileNavBP) {
+		display: table;
+		width: 100%;
+	}
+
+	a {
+		color: $fontColor;
+	}
+}

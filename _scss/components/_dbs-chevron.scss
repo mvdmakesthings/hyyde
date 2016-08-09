@@ -1,0 +1,52 @@
+// DBS Chevron
+#dbs-chev {
+	position: relative;
+	text-decoration: none;
+	color: $white;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 1rem;
+    float: right;
+}
+
+#dbs-chev strong {
+	width: 21em;
+	display: block;
+	float:right;
+	font-size: .8em;
+	font-weight:  normal;
+	text-align: center;
+}
+
+#dbs-chev span.txt {
+	max-width: 0;
+	padding: .25em 0;
+	display: inline-block;
+	overflow: hidden;
+	background: rgba($black,.2);
+	transition: all .5s ease-out;
+	position: absolute;
+	float:left;
+	right: 2em;
+	top: 0;
+
+}
+
+#dbs-chev a {
+	color: $white;
+	text-decoration: none;
+
+	&:hover {
+		color: darken($white, 20%);
+	}
+}
+
+#dbs-chev polygon{
+	fill: $white;
+}
+
+#dbs-chev.hover span,
+#dbs-chev:hover span{
+	max-width: 23em;
+	float:left;
+}

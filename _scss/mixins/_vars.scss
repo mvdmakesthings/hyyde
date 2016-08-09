@@ -1,0 +1,50 @@
+//BAS :TEMP
+
+// Base Colors
+$white: #ffffff;
+$black: #363636;
+$gray: #dadada;
+$lightGray: #efefef;
+//$fontColor: #2d2e32;
+$fontColor: #3A4145;
+$linkColor: blue;
+
+// Theme Colors
+$macie-gray: #494a51;
+$light-gray: #f4f4f4;
+$purple-dark: #595c74;
+$magenta: #ed145b;
+$spring-green: #aaea51;
+$moss-green: #92af0a;
+$blue-steel: #595c74;
+$fuscia: #ba0278;
+
+// Body Font Vars
+$bodyFontSize: 1em;
+$bodyLineHeight: 1.45;
+//$ratioScale: 1.414; // Augmented Fourth
+$ratioScale: 1.314;
+$body-copy: $gray;
+
+// Header Sizing
+$headerFontSize: .81em;
+$headerLineHeight: 1.35;
+
+// Layout Vars
+$containerSize: 64rem;
+$marginSpace: 1rem;
+
+// Media Query Break Points
+$phone: 22rem;
+$largePhone: 32rem;
+$smallScreen: 48rem;
+$mediumScreen: 60rem; // Currently for Font Scaling Only
+$largeScreen: 90rem;
+$mobileNavBP: $smallScreen; // Break mobile nav styles @
+
+//Max Breakpoints
+$mobileNavBPMax: $mobileNavBP - .001rem;
+$phoneMax: $phone - .001rem;
+$largePhoneMax: $largePhone - .001rem;
+$smallScreenMax: $smallScreen - .001rem;
+$largeScreenMax: $largeScreen - .001rem;

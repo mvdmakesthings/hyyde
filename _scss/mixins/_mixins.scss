@@ -1,0 +1,111 @@
+////
+/// Global Mixins
+////
+
+@mixin media( $bp, $determinate: min, $direction: width ) {
+    @media screen and ( #{$determinate}-#{$direction}: $bp ) { @content; }
+}
+
+/**
+ * Fixes clear bug in certain situations
+ *
+ * @group layout
+ * @link http://fuseinteractive.ca/blog/understanding-humble-clearfix#.VJ853sAEo Understanding the humble clearfix
+ * @example scss - Usage
+ *   @extend clearFix; // That's It!
+ */
+%clearFix, .clearfix{
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+
+/**
+ * An easy way to truncate text with an ellipsis. Requires the element to be block or inline-block.
+ *
+ * @group Typography
+ * @link http://web-design-weekly.com/2013/05/12/handy-sass-mixins/ Handy Sass Mixins
+ * @example scss - Usage
+ *   .text-truncate {
+ *      @extend text-truncate;
+ *   }
+ */
+%text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/**
+ * Hide On Breakpoint
+ *
+ * @param {Variable} $bp - Breakpoint variable, ie $largeScreen
+ * @param {String} $determinate ('min') - Whether it is max-width or min-width based
+ * @group General
+ * @link https://github.com/GumbyFramework/Gumby/blob/master/sass/functions/_visibility.scss Gumby Framework
+ * @example scss - Basic Usage
+ *   .class{
+ *      @include hideOn($largeScreen);
+ *   }
+ *
+ * @example scss - Reversed Determinate
+ *   @include hideOn($baby, 'max');
+ */
+@mixin hideOn($bp, $determinate: min ) {
+    @include break($bp, $determinate) {
+        display: none !important;
+    }
+}
+
+/**
+ * Show On Breakpoint
+ *
+ * @param {Variable} $bp - Breakpoint variable, ie $largeScreen
+ * @param {String} $determinate ('min') - Whether it is max-width or min-width based
+ * @group General
+ * @link https://github.com/GumbyFramework/Gumby/blob/master/sass/functions/_visibility.scss Gumby Framework
+ * @example scss - Basic Usage
+ *   .class{
+ *      @include showOn($largeScreen);
+ *   }
+ *
+ * @example scss - Reversed Determinate
+ *   @include showOn($baby, 'max');
+ */
+@mixin showOn($bp, $determinate: min) {
+    @include break($bp, $determinate) {
+        display: inherit !important;
+    }
+}
+
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+
+}

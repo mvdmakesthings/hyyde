@@ -1,0 +1,271 @@
+html {
+	font-size: $bodyFontSize;
+	@media (min-width:$smallScreen) {
+		font-size: $bodyFontSize * 0.95;
+	}
+	@media (min-width:$mediumScreen) {
+		font-size: $bodyFontSize;
+	}
+	@media (min-width: ($mediumScreen + $mediumScreen * .5)) {
+		font-size: $bodyFontSize * 1.1;
+	}
+	@media (min-width:$largeScreen) {
+		//font-size: $bodyFontSize * 1.12;
+	}
+}
+
+body {
+	font-weight: 400;
+	color: $fontColor;
+	font-size: $bodyFontSize;
+	line-height: $bodyLineHeight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-rendering: optimizeLegibility;
+	line-height: $headerLineHeight;
+	margin-top: 0;
+	margin-bottom: $marginSpace * .6;
+	text-transform: uppercase; //BAS
+}
+
+.h1, h1 {
+	font-size: $ratioScale * $ratioScale * $ratioScale * $ratioScale * $headerFontSize * .8;
+	@media (min-width:$smallScreen) {
+		font-size: $ratioScale * $ratioScale * $ratioScale * $ratioScale * $headerFontSize;
+	}
+	line-height: 1.2;
+}
+
+.h2, h2 {
+	font-size: $ratioScale * $ratioScale * $ratioScale * $headerFontSize * .8;
+	@media (min-width:$smallScreen) {
+		font-size: $ratioScale * $ratioScale * $ratioScale * $headerFontSize;
+	}
+}
+
+.h3, h3 {
+	font-size: $ratioScale * $ratioScale * $headerFontSize * .8;
+	@media (min-width:$smallScreen) {
+		font-size: $ratioScale * $ratioScale * $headerFontSize;
+	}
+}
+
+.h4, h4 {
+	font-size: $ratioScale * $headerFontSize * .8;
+	@media (min-width:$smallScreen) {
+		font-size: $ratioScale * $headerFontSize;
+	}
+}
+
+.h5, h5 {
+	font-size: $headerFontSize * .8; // / $ratioScale;
+	@media (min-width:$smallScreen) {
+		font-size: $headerFontSize; // / $ratioScale;
+	}
+}
+
+.h6, h6 {
+	font-size: $headerFontSize / $ratioScale * .8; // / $ratioScale;
+	@media (min-width:$smallScreen) {
+		font-size: $headerFontSize / $ratioScale; // / $ratioScale;
+	}
+}
+
+.hidden,
+.hide,
+.screen-reader-text {
+	display: none;
+}
+
+.font_small,
+small {
+	font-size: 0.707em;
+}
+
+a {
+	color: $linkColor;
+	transition: color ease 0.3s;
+}
+a:hover {
+	color: darken($linkColor, 10%);
+}
+
+ol, p, ul {
+	margin: 0 0 $marginSpace;
+}
+
+ol ol, ol ul, ul ol, ul ul {
+	margin: 0 0 $marginSpace;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $lightGray;
+	margin: 0 0 $marginSpace;
+	padding: 0;
+}
+
+blockquote {
+	box-sizing: border-box;
+	margin: 0 0 $marginSpace -1.2em;
+	padding: 0 0 0 1.6em;
+	border-left: $lightGray 0.6em solid;
+}
+
+blockquote p {
+	margin: 0 0 0.8em;
+	font-style: italic;
+}
+
+blockquote small {
+	display: inline-block;
+	margin: 0 0 0.8em 1.5em;
+	font-size: 0.9em;
+}
+blockquote small:before {
+	content: '\2014 \00A0';
+}
+
+blockquote cite {
+	font-weight: bold;
+}
+
+blockquote cite a {
+	font-weight: normal;
+}
+
+dl {
+	margin: 0 0 $marginSpace;
+}
+
+dl dt {
+	float: left;
+	width: 180px;
+	overflow: hidden;
+	clear: left;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: bold;
+	margin: 0 0 $marginSpace;
+}
+
+dl dd {
+	margin-left: 2em;
+	margin-bottom: $marginSpace;
+}
+
+mark {
+	background-color: $lightGray;
+}
+
+code,
+tt {
+	padding: 1px 3px;
+	font-family: Inconsolata, monospace, sans-serif;
+	font-size: 0.85em;
+	white-space: pre;
+	border: 1px solid darken($lightGray,10%);
+	background: $lightGray;
+	border-radius: 2px;
+}
+
+pre {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 $marginSpace;
+	border: 1px solid darken($lightGray,10%);
+	width: 100%;
+	padding: 1em 1.25em;
+	font-family: Inconsolata, monospace, sans-serif;
+	font-size: 0.9em;
+	white-space: pre;
+	overflow: auto;
+	background: $lightGray;
+	border-radius: 3px;
+}
+
+pre code,
+tt {
+	font-size: inherit;
+	white-space: -moz-pre-wrap;
+	white-space: pre-wrap;
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
+table {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 $marginSpace;
+	width: 100%;
+	max-width: 100%;
+	background-color: transparent;
+}
+
+table td,
+table th {
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #efefef;
+}
+
+//table th { color: #000; }
+table caption + thead tr:first-child td,
+table caption + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table thead:first-child tr:first-child td,
+table thead:first-child tr:first-child th {
+	border-top: 0;
+}
+
+table tbody + tbody {
+	border-top: 2px solid #efefef;
+}
+
+table table table {
+	background-color: #fff;
+}
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+	background-color: #f6f6f6;
+}
+
+table.plain {
+	tbody > tr:nth-child(odd) > td,
+	tbody > tr:nth-child(odd) > th {
+		background: transparent;
+	}
+}
+
+.screen-reader-text,
+.hide-text{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.hide-text{
+	text-indent: -9999px;
+}
+
+.screen-reader-text:active,
+.screen-reader-text:focus{
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}

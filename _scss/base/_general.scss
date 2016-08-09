@@ -1,0 +1,78 @@
+a{
+	color: $magenta;
+	text-decoration: none;
+	transition: color 300ms;
+
+	&:focus,
+	&:hover{
+		color: darken($magenta, 10%);
+	}
+}
+
+a.anchor-white,
+.anchor-white a{
+	color: $white;
+	&:focus, &:hover{
+		color: darken($white, 10%);
+	}
+}
+
+.block{
+	img{
+		width: 100%;
+	}
+}
+
+.alignright {
+	float: right;
+	margin-left: 2em;
+	margin-bottom: 2em;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 2em;
+	margin-bottom: 2em;
+}
+
+.alignnone {
+	margin: 0 1em 1em;
+}
+
+/**
+ * Floated image fix that aligns top with current project paragraph's line-height
+ */
+
+p > img.alignleft,
+p > img.alignright {
+	margin-top: 0.75em;
+}
+
+.desktop-hidden {
+	@include media ($smallScreen) {
+		display: none;
+	}
+}
+
+.mobile-hidden {
+	@include media ($smallScreen, 'max') {
+		display: none;
+	}
+}
+
+.site_content {
+	@include media ($smallScreen) {
+		padding-bottom: 2em;
+	}
+}
+
+.lazy-load{
+	max-width: 100vw;
+}
+
+img, svg {
+	max-width: 100%;
+}
+svg {
+	width: 100%; //Stabalize svg width if undefined
+}
