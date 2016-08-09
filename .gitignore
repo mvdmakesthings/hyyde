@@ -4,3 +4,4 @@ _site
 .DS_STORE
 .git
 node_modules
+images/resized/*
