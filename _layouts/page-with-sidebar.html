@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="page template-page-with-sidebar">
+    <aside class="page__sidebar">
+        {% include sidebar.html %}
+    </aside>
+
+    <article class="page__main">
+
+        <header class="page__header">
+            <h1 class="page__title">{{ page.title }}</h1>
+        </header>
+
+        <main class="page__content">
+            {{ content }}
+        </main>
+
+        <footer class="page__footer" ></footer>
+
+    </article>
+</div>
