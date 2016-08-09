@@ -19,5 +19,20 @@
   "bugs": {
     "url": "https://github.com/DBSInteractive/dbsinteractive-hyde/issues"
   },
-  "homepage": "https://github.com/DBSInteractive/dbsinteractive-hyde#readme"
+  "homepage": "https://github.com/DBSInteractive/dbsinteractive-hyde#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "glob": "^7.0.3",
+    "grunticon-lib": "^1.0.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-help": "^1.6.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "request": "^2.72.0"
+  }
 }
